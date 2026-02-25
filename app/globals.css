@@ -1,0 +1,101 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-rajdhani: var(--font-rajdhani);
+  --font-mono: var(--font-mono);
+  --font-sora: var(--font-sora);
+  --font-poppins: var(--font-poppins);
+}
+
+:root {
+  --bg: #F8FAFC;
+  --s1: #FFFFFF;
+  --s2: #F1F5F9;
+  --s3: #E2E8F0;
+  --blue: #1565C0;
+  --blue2: #42A5F5;
+  --cyan: #06b6d4;
+  --teal: #14b8a6;
+  --green: #16a34a;
+  --yellow: #ca8a04;
+  --orange: #ea580c;
+  --red: #dc2626;
+  --purple: #7c3aed;
+  --pink: #db2777;
+  --lime: #65a30d;
+  --text: #0F172A;
+  --text2: #475569;
+  --text3: #64748B;
+  --border: rgba(0, 0, 0, 0.08);
+  --glow: rgba(21, 101, 192, 0.1);
+  --r: 16px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-poppins), var(--font-sora), sans-serif;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+}
+
+.glass-card {
+  background: #FFFFFF;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--r);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(21, 101, 192, 0.3);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes marker-pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes marker-glow {
+  0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(37, 99, 235, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+}
+
+@keyframes marker-float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-marker-pulse {
+  animation: marker-pulse 2s infinite ease-in-out;
+}
+
+.animate-marker-glow {
+  animation: marker-glow 2s infinite;
+}
+
+.animate-marker-float {
+  animation: marker-float 3s infinite ease-in-out;
+}
+
+.leaflet-marker-icon {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}

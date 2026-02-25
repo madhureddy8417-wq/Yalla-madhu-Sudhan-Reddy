@@ -1,0 +1,8 @@
+{
+  "name": "SMART MUNICIPAL MITRA",
+  "description": "360° Garbage Vehicle AI System — Unified Smart Municipal Platform for Mobile Mapping, AI Monitoring, and Predictive Governance.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ]
+}
